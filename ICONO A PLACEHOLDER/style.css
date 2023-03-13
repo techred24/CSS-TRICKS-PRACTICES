@@ -1,0 +1,34 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.icono-placeholder, .icono-placeholder-image {
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.3rem;
+    border: 1px solid #d3d6e4;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    width: 30%;
+    margin: 0 10px;
+
+}
+.icono-placeholder::placeholder {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 300;
+}
+.icono-placeholder:focus, .icono-placeholder-image:focus {
+    outline: none;
+}
+.icono-placeholder-image::placeholder {
+    background-image: url(./coffe.png);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 3% center;
+}
