@@ -1,0 +1,99 @@
+:root {
+    --white: #fff;
+    --blue: #0074D9;
+    --primario: var(--blue);
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+    background: var(--white);
+	font-family: "Roboto";
+}
+
+a {
+
+	color: var(--primario);
+}
+
+.wrap {
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.formulario h2 {
+    font-size: 16px;
+    color: #001F3F;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.formulario > div {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+    display: none;
+}
+.formulario .radio label,
+.formulario .checkbox label {
+    cursor: pointer;
+    color: #0774D9;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    padding: 5px 15px 5px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+
+    transition: padding 1s ease;
+    transition: border-radius 1s ease;
+    transition: color 1s ease;
+    transition: background-color 1s ease-in-out;
+    /* transition: all 2s ease; */
+}
+.formulario .radio label:hover,
+.formulario .checkbox label:hover {
+    background: rgba(0, 116, 217, 0.2);
+}
+
+.formulario .radio label::before,
+.formulario .checkbox label::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: transparent;
+    border: 3px solid #0074D9;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    /* top: 2px; */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: display .3s ease-in-out;
+}
+.formulario .checkbox label::before {
+    border-radius: 3px;
+}
+/* .element-to-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+.formulario input[type='radio']:checked + label,
+.formulario input[type='checkbox']:checked + label {
+    padding: 5px 15px;
+    background-color: #0774D9;
+    border-radius: 2px;
+    color: var(--white);
+}
+.formulario input[type='radio']:checked + label:before,
+.formulario input[type='checkbox']:checked + label::before {
+    display: none;
+}
