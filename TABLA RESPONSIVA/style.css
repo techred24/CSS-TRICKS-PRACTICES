@@ -33,6 +33,7 @@ tr td:nth-child(2n) {
 .table-container {
     overflow-x: auto;
     overflow-y: auto;
+    height: 500px;
 }
 .table-rwd {
     min-width: 500px;
@@ -40,15 +41,21 @@ tr td:nth-child(2n) {
 }
 
 .table-rwd td:first-child {
-    position: absolute;
+    position: sticky;
+    left: 0;
     background-color: black;
     width: 8em;
+}
+.table-rwd th {
+    position: sticky;
+    top: 0;
 }
 .table-rwd th:first-child {
     width: 8em;
     background-color: black;
-    position: absolute;
-    /* z-index: 1000; */
+    /* position: sticky; */
+    left: 0;
+    z-index: 1000;
 }
 
 .table-rwd tr:hover td:first-child {
