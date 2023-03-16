@@ -1,0 +1,28 @@
+body {
+    counter-reset: capitulo;
+}
+h5 {
+    counter-reset: subcapitulo;
+}
+h5::before {
+    color: blueviolet;
+    counter-increment: capitulo;
+    content: 'Tutorial ' counter(capitulo) ': ';
+}
+h6::before {
+    counter-increment: subcapitulo;
+    content: counter(capitulo) '.' counter(subcapitulo) ' ';
+}
+h5, h6 {
+    line-height: 0.2;
+}
+
+
+ol {
+    list-style-type: none;
+    counter-reset: lista;
+}
+li::before {
+    counter-increment: lista;
+    content: counters(lista, '.-') ' ';
+}
